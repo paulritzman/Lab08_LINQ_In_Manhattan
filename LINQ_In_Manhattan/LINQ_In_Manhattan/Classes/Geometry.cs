@@ -6,7 +6,7 @@ namespace LINQ_In_Manhattan.Classes
 {
     public class Geometry
     {
-        public double CoordinateLat { get; set; } = 0;
-        public double CoordinateLon { get; set; } = 0;
+        public string Type { get; set; }
+        public List<double> Coordinates { get; set; }
     }
 }
