@@ -1,12 +1,22 @@
 ﻿using System;
+using System.IO;
+using System.Linq;
+using LINQ_In_Manhattan.Classes;
+using Newtonsoft.Json;
 
 namespace LINQ_In_Manhattan
 {
-    class Program
+    public class Program
     {
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            Neighborhoods neighborObj = Neighborhoods.DeserializeJSON();
+
+            Console.WriteLine(neighborObj.Features[0].Properties.City);
+
+            Console.ReadLine();
         }
+
+
     }
 }
