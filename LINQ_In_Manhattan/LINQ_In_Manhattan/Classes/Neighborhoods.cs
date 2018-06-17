@@ -12,13 +12,10 @@ namespace LINQ_In_Manhattan.Classes
         public List<Features> Features { get; set; }
         public string Type { get; set; }
 
-
-
-
-
         public static Neighborhoods DeserializeJSON()
         {
             Console.WriteLine("Deserializing JSON...");
+            System.Threading.Thread.Sleep(1000);
 
             const string JSON_PATH = "../../../../../data.json";
             string jsonData = "";
@@ -28,11 +25,9 @@ namespace LINQ_In_Manhattan.Classes
                 using (StreamReader strRead = new StreamReader(JSON_PATH))
                 {
                     jsonData = strRead.ReadToEnd();
-                    Neighborhoods parsedObj = JsonConvert.DeserializeObject<Neighborhoods>(jsonData);
-                    
-                    //string[] myString = new string[parsedObj.Features.Count];
+                    Neighborhoods deSerailObj = JsonConvert.DeserializeObject<Neighborhoods>(jsonData);
 
-                    return parsedObj;
+                    return deSerailObj;
                 }
             }
             catch (Exception e)
