@@ -11,11 +11,25 @@ namespace LINQ_In_Manhattan
     {
         public static void Main(string[] args)
         {
+
+            var distinctHoods = FindDistinctNeighborhoods();
+            Console.Clear();
+
+            foreach (var hood in distinctHoods)
+            {
+                Console.WriteLine(hood);
+            }
+
+            Console.WriteLine();
+        }
+
+        public static IEnumerable<string> FindDistinctNeighborhoods()
+        {
             Neighborhoods neighborObj = Neighborhoods.DeserializeJSON();
 
             List<string> hoodList = new List<string>();
 
-            for (int i = neighborObj.Features.Count - 1; i > 0; i-- )
+            for (int i = neighborObj.Features.Count - 1; i > 0; i--)
             {
                 hoodList.Add(neighborObj.Features[i].Properties.Neighborhood);
             }
@@ -26,12 +40,7 @@ namespace LINQ_In_Manhattan
 
             var distinctHoods = hoods.Distinct();
 
-            foreach (var hood in distinctHoods)
-            {
-                Console.WriteLine(hood);
-            }
-
-            Console.ReadLine();
+            return distinctHoods;
         }
 
 

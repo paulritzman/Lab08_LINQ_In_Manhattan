@@ -15,7 +15,7 @@ namespace LINQ_In_Manhattan.Classes
         public static Neighborhoods DeserializeJSON()
         {
             Console.WriteLine("Deserializing JSON...");
-            System.Threading.Thread.Sleep(1500);
+            System.Threading.Thread.Sleep(1000);
 
             const string JSON_PATH = "../../../../../data.json";
             string jsonData = "";
