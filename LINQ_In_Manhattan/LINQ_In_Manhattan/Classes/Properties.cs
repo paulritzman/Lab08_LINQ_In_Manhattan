@@ -1,11 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace LINQ_In_Manhattan.Classes
 {
     public class Properties
     {
+        // Define Class properties with default values
         public int Zip { get; set; } = 0;
         public string City { get; set; } = "";
         public string State { get; set; } = "";
