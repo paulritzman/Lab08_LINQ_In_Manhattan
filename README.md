@@ -18,4 +18,4 @@
 
 * RazorCX Technologies - [How to Create C# Class from Json using Newtonsoft.Json](https://www.youtube.com/watch?v=SholKTNGdHk)
 
-* json2csharp - Developed by Jonathan Keith- [json2csharp](http://json2csharp.com/)
+* json2csharp - Developed by Jonathan Keith - [json2csharp](http://json2csharp.com/)
